@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jereign B. Lim — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="aa.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="border-glow.css">
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">Jereign<span class="dot">.</span>Lim</div>
+
+    <button id="menuBtn" class="menu-btn" aria-label="toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav" class="nav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button id="darkModeToggle" class="icon-btn" aria-label="toggle dark mode">
+      <svg id="iconSun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+      </svg>
+      <svg id="iconMoon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+      </svg>
+    </button>
+  </header>
+
+  <div class="scroll-bar"><div id="scrollFill" class="scroll-fill"></div></div>
+
+  <main>
+
+    <section class="hero">
+        
+
+      <div class="hero-top">
+        <div class="hero-identity">
+          <h1>Jereign B. Lim</h1>
+          <p class="hero-title">Information Technology Student &nbsp;|&nbsp; Web Development Specialization</p>
+        </div>
+        <ul class="hero-contact">
+          <li><a href="tel:+639272889092">(+63) 927 288 9092</a></li>
+          <li><a href="mailto:jereign.ud@gmail.com">jereign.ud@gmail.com</a></li>
+          <li><a href="https://github.com/jereignlim" target="_blank" rel="noopener">github.com/jereignlim</a></li>
+          <li>Bacoor City, Cavite</li>
+        </ul>
+      </div>
+
+      <div class="hero-rule"></div>
+
+      <div class="hero-body">
+        <p class="hero-role"><span class="typing" id="typingTarget"></span></p>
+        <p class="hero-sub">
+          An aspiring web developer and Information Technology student with hands-on experience in
+          full-stack web application development, mobile systems development, and UI/UX design —
+          currently strengthening skills in React, PHP, Java, C#, and SQL.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-inner">
+        <p class="eyebrow">Professional Profile</p>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <p class="about-text">
+            I'm currently pursuing a Bachelor of Science in Information Technology, specializing in Web
+            Development, at De La Salle University – Dasmariñas. I've built full-stack web platforms,
+            Android applications, and UI/UX prototypes through collaborative academic projects, with a
+            growing foundation in structured database systems and role-based access control. I'm
+            passionate about building impactful digital platforms and eager to grow in real-world
+            software development environments.
+          </p>
+          <div class="education-card">
+            <p class="edu-label">Education</p>
+            <p class="edu-school">De La Salle University – Dasmariñas</p>
+            <p class="edu-degree">BS Information Technology, Web Development Specialization</p>
+            <p class="edu-dates">Aug 2023 – Present</p>
+            <div class="edu-stats">
+              <div><strong>3.67</strong><span>GPA / 4.0</span></div>
+              <div><strong>5×</strong><span>Dean's Lister</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-tint">
+      <div class="section-inner">
+        <p class="eyebrow">Technical Toolkit</p>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">Core technologies and competencies I've applied across academic and personal projects.</p>
+        <div id="skillGrid" class="skill-grid"><!-- injected by JS --></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="section-inner">
+        <p class="eyebrow">Academic Projects</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Select a project to see the full situation–task–action–result breakdown.</p>
+        <div id="projectList" class="project-grid"><!-- injected by JS --></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience-section section-tint">
+      <div class="section-inner">
+        <p class="eyebrow">Leadership &amp; Experience</p>
+        <h2 class="section-title">Experience</h2>
+        <div id="experienceList" class="experience-list"><!-- injected by JS --></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-inner">
+        <p class="eyebrow">Let's Work Together</p>
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>Open to internship, junior developer, and collaborative project opportunities. Reach out through the form or directly below.</p>
+            <ul class="contact-list">
+              <li><span>Phone</span><a href="tel:+639272889092">(+63) 927 288 9092</a></li>
+              <li><span>Email</span><a href="mailto:jereign.ud@gmail.com">jereign.ud@gmail.com</a></li>
+              <li><span>GitHub</span><a href="https://github.com/jereignlim" target="_blank" rel="noopener">github.com/jereignlim</a></li>
+              <li><span>Location</span><span>Bacoor City, Cavite</span></li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <form id="contactForm" novalidate>
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name">
+                <span class="error" id="nameError"></span>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@email.com">
+                <span class="error" id="emailError"></span>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="What would you like to discuss?"></textarea>
+                <span class="error" id="messageError"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+              <p id="formMsg" class="form-msg" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Jereign B. Lim — Information Technology Student, Web Development Specialization</p>
+  </footer>
+
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <button id="modalClose" class="modal-close" aria-label="close">&times;</button>
+        <span id="modalTag" class="tag"></span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalYearRole" class="modal-year-role"></p>
+      </div>
+      <div class="modal-body">
+        <div class="star-block">
+          <div class="star-item star-s">
+            <span class="star-badge">S</span>
+            <div><strong>Situation</strong><p id="modalSituation"></p></div>
+          </div>
+          <div class="star-item star-t">
+            <span class="star-badge">T</span>
+            <div><strong>Task</strong><p id="modalTask"></p></div>
+          </div>
+          <div class="star-item star-a">
+            <span class="star-badge">A</span>
+            <div><strong>Action</strong><p id="modalAction"></p></div>
+          </div>
+          <div class="star-item star-r">
+            <span class="star-badge">R</span>
+            <div><strong>Result</strong><p id="modalResult"></p></div>
+          </div>
+        </div>
+        <p class="stack-label">Tech Stack</p>
+        <div id="modalStack" class="stack-pills"></div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="back to top">↑</button>
+  <script src="aa.js"></script> 
+  <script src="border-glow.js"></script>
+  <script src="script.js"></script>
+  <script src="effects-init.js"></script>  
+  
+</body>
+
+</html>
