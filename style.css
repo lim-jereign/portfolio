@@ -160,7 +160,6 @@ body.dark-mode .site-header { background: rgba(23, 21, 26, 0.9); }
   border-bottom: 2px solid var(--line);
 }
 .section-sub { color: var(--ink-soft); margin-top: 14px; font-size: 0.95rem; }
-.center { text-align: center; }
 
 .hero {
   max-width: var(--max);

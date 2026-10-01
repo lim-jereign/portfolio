@@ -62,7 +62,7 @@ const skillGroups = [
   {
     category: "Database",
     icon: "M4 6c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2zM4 6v12c0 1.1 3.6 2 8 2s8-.9 8-2V6M4 12c0 1.1 3.6 2 8 2s8-.9 8-2",
-    items: ["MySQL", "Firebase"]
+    items: ["MySQL"]
   },
   {
     category: "Web Technologies",
@@ -227,7 +227,7 @@ const experience = [
   {
     title: "Director of Treasury",
     org: "Information Technology Program Council",
-    dates: "2025 – Present",
+    dates: "2025 – May 2026",
     points: [
       "Manage financial records and transaction documentation",
       "Monitor inflow and outflow of organizational funds",
