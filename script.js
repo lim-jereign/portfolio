@@ -270,6 +270,9 @@ const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 const formMsg = document.getElementById("formMsg");
 
+// Paste your Google Apps Script Web App URL here (see google-apps-script.gs)
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw0vYlPBjrr2qStqvITmmuW-0HYR-_z4Ui-SnluGMYP8MKlGPg7KXBV_8KORgXOZooABA/exec";
+
 function setError(input, errorId, message) {
   const errorEl = document.getElementById(errorId);
   const field = input.closest(".field");
@@ -313,9 +316,31 @@ contactForm.addEventListener("submit", e => {
   }
 
   if (valid) {
-    formMsg.textContent = "Message sent successfully. I'll get back to you soon.";
-    formMsg.className = "form-msg success";
-    contactForm.reset();
+    const submitBtn = contactForm.querySelector("button[type=submit]");
+    if (submitBtn) submitBtn.disabled = true;
+    formMsg.textContent = "Sending...";
+    formMsg.className = "form-msg";
+
+    const body = new URLSearchParams({
+      name: nameInput.value.trim(),
+      email: emailInput.value.trim(),
+      message: messageInput.value.trim()
+    });
+
+    // no-cors: Apps Script doesn't send CORS headers, so the response is opaque
+    fetch(SHEET_WEB_APP_URL, { method: "POST", mode: "no-cors", body })
+      .then(() => {
+        formMsg.textContent = "Message sent successfully. I'll get back to you soon.";
+        formMsg.className = "form-msg success";
+        contactForm.reset();
+      })
+      .catch(() => {
+        formMsg.textContent = "Something went wrong. Please try again later.";
+        formMsg.className = "form-msg fail";
+      })
+      .finally(() => {
+        if (submitBtn) submitBtn.disabled = false;
+      });
   } else {
     formMsg.textContent = "Please fix the highlighted fields.";
     formMsg.className = "form-msg fail";
