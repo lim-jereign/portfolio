@@ -55,29 +55,29 @@ typeLoop();
 
 const skillGroups = [
   {
-    category: "Programming & Development",
+    category: "Development",
     icon: "M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12",
-    items: ["ReactJS", "C#", "Java", "Python", "PHP"]
+    items: ["HTML", "CSS"]
   },
   {
-    category: "Database",
-    icon: "M4 6c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2zM4 6v12c0 1.1 3.6 2 8 2s8-.9 8-2V6M4 12c0 1.1 3.6 2 8 2s8-.9 8-2",
-    items: ["MySQL"]
-  },
-  {
-    category: "Web Technologies",
+    category: "Frameworks",
     icon: "M3 5h18M3 5v14h18V5M8 12l2 2-2 2M14 16h2",
-    items: ["HTML", "CSS", "CRUD Operations"]
+    items: ["ReactJS", "Angular"]
+  },
+  {
+    category: "Backend & Databases",
+    icon: "M4 6c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2zM4 6v12c0 1.1 3.6 2 8 2s8-.9 8-2V6M4 12c0 1.1 3.6 2 8 2s8-.9 8-2",
+    items: ["Python", "Java", "C#", "PHP", "MySQL"]
   },
   {
     category: "Tools & Platforms",
     icon: "M14.7 6.3a1 1 0 010 1.4l-7 7a1 1 0 01-1.4 0l-2-2a1 1 0 011.4-1.4l1.3 1.3 6.3-6.3a1 1 0 011.4 0zM19 12a7 7 0 11-3.5-6.06",
-    items: ["Visual Studio 2022", "VS Code", "Android Studio", "Figma", "Canva"]
+    items: ["Visual Studio 2022", "Visual Studio Code", "Android Studio", "Figma", "Canva"]
   },
   {
     category: "Core Competencies",
     icon: "M12 2l2.4 5 5.6.8-4 4 1 5.6L12 15l-5 2.4 1-5.6-4-4 5.6-.8z",
-    items: ["UI/UX Design", "System Development", "Responsive Web Design", "CRUD System Implementation", "Basic Database Design", "Debugging & Troubleshooting"]
+    items: ["UI/UX Design", "System Development", "Responsive Web Design", "CRUD System Implementation", "Basic Database Design", "Role-Based Access Systems", "Debugging & Troubleshooting"]
   },
   {
     category: "Soft Skills",
@@ -122,7 +122,21 @@ document.querySelectorAll("#skillGrid .skill-card").forEach(card => skillObserve
 
 const projects = [
   {
+    title: "CZAMS",
+    summary: "Led a team of three in developing a full-stack web application for an aircon services company covering customer booking, down payments, and service tracking, while handling client requirements gathering and building the customer-side modules using React, Node.js, Express, MongoDB, and JWT.",
+    subtitle: "Cooling Zone Aircon Management System",
+    year: "Capstone, 2026",
+    tag: "Project Leader",
+    role: "Project Leader and Developer · Team of 3",
+    situation: "An aircon services company needed a full-stack web application to manage customer booking, down payments, and service tracking.",
+    task: "Lead a team of three in delivering the system, gather client requirements, and build the customer-side modules.",
+    action: "Handled client requirements gathering and led the team while building the customer-side modules using React, Node.js, Express, MongoDB, and JWT authentication.",
+    result: "Delivered a full-stack web application covering customer booking, down payments, and service tracking for the client.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "JWT"]
+  },
+  {
     title: "GovAssist",
+    summary: "Developed a full-stack web application centralizing verified government directories, step-by-step service guides, scam protection tools, and emergency response information using React, PHP, SQL, and Firebase.",
     subtitle: "Centralized Government Directory Web Platform",
     year: "2025",
     tag: "Web Developer",
@@ -135,6 +149,7 @@ const projects = [
   },
   {
     title: "Mobile Loan System Calculator",
+    summary: "Built a role-based mobile loan system implementing structured financial computation logic, database integration, authentication, and error handling using Java and Android Studio.",
     subtitle: "Android Loan Computation App",
     year: "2025",
     tag: "Mobile App Developer",
@@ -147,6 +162,7 @@ const projects = [
   },
   {
     title: "TechLib",
+    summary: "Developed a role-based desktop system for laboratory equipment inventory and transaction tracking using C# with structured database integration.",
     subtitle: "Laboratory Equipment Management System",
     year: "2025",
     tag: "Systems Developer",
@@ -159,10 +175,11 @@ const projects = [
   },
   {
     title: "Medical Application UI/UX Case Study",
+    summary: "Designed an elderly-friendly healthcare mobile interface prototype in Figma applying accessibility and usability principles.",
     subtitle: "Accessible Healthcare Mobile Interface",
     year: "2024",
     tag: "Frontend Designer",
-    role: "Frontend Designer · Team of 4",
+    role: "Frontend Designer · Team of 3",
     situation: "Elderly users often struggle with complex mobile healthcare interfaces.",
     task: "Design an accessible and user-friendly healthcare mobile interface tailored for elderly users.",
     action: "Created high-fidelity prototypes in Figma, applying accessibility standards, simplified navigation, and usability principles.",
@@ -191,7 +208,7 @@ projects.forEach((p, i) => {
     <span class="tag">${p.tag}</span>
     <h3>${p.title}</h3>
     <p class="project-subtitle">${p.subtitle} · ${p.year}</p>
-    <p>${p.result}</p>
+    <p>${p.summary}</p>
     <div class="card-hint">view details →</div>
   `;
   card.addEventListener("click", () => openModal(i));
@@ -227,10 +244,9 @@ const experience = [
   {
     title: "Director of Treasury",
     org: "Information Technology Program Council",
-    dates: "2025 – May 2026",
+    dates: "2025 – 2026",
     points: [
-      "Manage financial records and transaction documentation",
-      "Monitor inflow and outflow of organizational funds",
+      "Manage financial records and monitor organizational inflow and outflow transactions while maintaining structured financial documentation",
       "Ensure structured and accountable financial reporting"
     ]
   },
@@ -239,9 +255,8 @@ const experience = [
     org: "Maart.Chich",
     dates: "2021 – 2025",
     points: [
-      "Founded and independently managed a handmade product brand",
-      "Oversaw product design, marketing, customer transactions, and logistics",
-      "Participated in university bazaars and managed end-to-end operations independently"
+      "Founded and independently managed a handmade product brand overseeing product design, social media marketing, customer transactions, logistics coordination, and university bazaar participation",
+      "Managed end-to-end operations independently"
     ]
   }
 ];
