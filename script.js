@@ -128,10 +128,10 @@ const projects = [
     year: "Capstone, 2026",
     tag: "Project Leader",
     role: "Project Leader and Developer · Team of 3",
-    situation: "An aircon services company needed a full-stack web application to manage customer booking, down payments, and service tracking.",
-    task: "Lead a team of three in delivering the system, gather client requirements, and build the customer-side modules.",
-    action: "Handled client requirements gathering and led the team while building the customer-side modules using React, Node.js, Express, MongoDB, and JWT authentication.",
-    result: "Delivered a full-stack web application covering customer booking, down payments, and service tracking for the client.",
+    situation: "Aircon servicing businesses often manage bookings, technician schedules, and payments manually, which leads to double-booked slots, scattered payment proofs, and no clear record of completed jobs or warranty claims.",
+    task: "Develop a centralized web platform for booking, technician assignment, payment verification, service reporting, and warranty tracking, serving customers, technicians, and administrators.",
+    action: "Built a full-stack application using React, Node.js, Express, and MongoDB; implemented role-based access, rule-based booking and scheduling, technician assignment with staffing rules, a payment verification workflow, refund and back job handling, service reports with signatures, automated status updates and reminders, and an audit log. Secured the system with signed file links, rate limiting, and token invalidation, and validated it with automated tests, a separate audit database, and browser checks at desktop and phone widths.",
+    result: "Delivered a centralized service management platform that passes 1,067 automated tests and a 137-check real-database audit, with concurrency issues such as double booking found and fixed before release.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT"]
   },
   {
