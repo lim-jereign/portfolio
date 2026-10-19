@@ -148,7 +148,7 @@ const projects = [
     role: "Web Developer · Team of 2",
     situation: "Many citizens struggle to access verified government websites, service guides, and scam alerts due to scattered and unreliable information sources.",
     task: "Develop a centralized web platform providing verified government directories, step-by-step service guides, scam protection tools, and emergency response information.",
-    action: "Built a full-stack application using React, PHP, SQL, and Firebase; implemented CRUD-based directory management, branch-specific office details, structured guides for common services, scam verification and reporting features, and emergency hotline modules.",
+    action: "Built a full-stack application using React, PHP, SQL, and Firebase; implemented CRUD-based directory management, branch-specific office details, structured step-by-step guides for common services (IDs, benefits, healthcare, voter registration), scam verification and reporting features, and emergency hotline modules.",
     result: "Delivered a centralized assistance platform that improved accessibility to official government services, reduced misinformation risks, and streamlined public service guidance.",
     stack: ["React", "PHP", "SQL", "Firebase"]
   },
@@ -159,7 +159,7 @@ const projects = [
     year: "2025",
     tag: "Mobile App Developer",
     role: "Mobile App Developer · Team of 3",
-    situation: "A cooperative required a mobile-based system capable of handling multiple loan types with structured interest rate rules and approval workflows.",
+    situation: "The cooperative required a mobile-based system capable of handling multiple loan types with structured interest rate rules and approval workflows.",
     task: "Develop a functional Android application supporting member registration, loan computation, and role-based user and admin access.",
     action: "Implemented financial computation logic in a separate Java class, built authentication and database integration, designed a GUI with a navigation drawer, and applied structured error handling.",
     result: "Delivered a functional mobile loan system capable of calculating interest, service charges, take-home loan values, and monthly amortization with role-based control.",
@@ -174,7 +174,7 @@ const projects = [
     role: "Systems Developer · Team of 2",
     situation: "Laboratory equipment borrowing lacked structured monitoring, user tracking, and role-based access control.",
     task: "Develop a desktop-based system to manage equipment inventory, borrowing/return transactions, and user records with Admin and User roles.",
-    action: "Designed a database structure with 30+ student records, implemented an Admin module (equipment management, account management, record viewing, password recovery), a borrowing/return module with timestamp tracking, and role-based access using MDI Forms in C#.",
+    action: "Designed database structure with 30+ student records, implemented Admin module (equipment management, account management, record viewing, password recovery), developed borrowing/return module with timestamp tracking, and applied role-based access using MDI Forms in C#.",
     result: "Delivered a structured laboratory management system, improving inventory control, transaction logging, and access security.",
     stack: ["C#", "MySQL", "MDI Forms"]
   },
@@ -223,7 +223,7 @@ projects.forEach((p, i) => {
 function openModal(index) {
   const p = projects[index];
   modalTag.textContent = p.tag;
-  modalTitle.textContent = `${p.title} — ${p.subtitle}`;
+  modalTitle.textContent = `${p.title}: ${p.subtitle}`;
   modalYearRole.textContent = `${p.role} · ${p.year}`;
   modalSituation.textContent = p.situation;
   modalTask.textContent = p.task;
