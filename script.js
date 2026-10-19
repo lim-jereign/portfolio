@@ -57,7 +57,7 @@ const skillGroups = [
   {
     category: "Development",
     icon: "M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12",
-    items: ["HTML", "CSS"]
+    items: ["HTML", "CSS", "TypeScript", "JavaScript"]
   },
   {
     category: "Frameworks",
@@ -70,12 +70,12 @@ const skillGroups = [
     items: ["Python", "Java", "C#", "PHP", "MySQL"]
   },
   {
-    category: "Tools & Platforms",
+    category: "Developer Tools",
     icon: "M14.7 6.3a1 1 0 010 1.4l-7 7a1 1 0 01-1.4 0l-2-2a1 1 0 011.4-1.4l1.3 1.3 6.3-6.3a1 1 0 011.4 0zM19 12a7 7 0 11-3.5-6.06",
     items: ["Visual Studio 2022", "Visual Studio Code", "Android Studio", "Figma", "Canva"]
   },
   {
-    category: "Core Competencies",
+    category: "Specializations",
     icon: "M12 2l2.4 5 5.6.8-4 4 1 5.6L12 15l-5 2.4 1-5.6-4-4 5.6-.8z",
     items: ["UI/UX Design", "System Development", "Responsive Web Design", "CRUD System Implementation", "Basic Database Design", "Role-Based Access Systems", "Debugging & Troubleshooting"]
   },
