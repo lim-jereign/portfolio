@@ -55,34 +55,39 @@ typeLoop();
 
 const skillGroups = [
   {
-    category: "Development",
+    category: "Programming & Development",
     icon: "M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12",
-    items: ["HTML", "CSS", "TypeScript", "JavaScript"]
+    items: ["JavaScript", "TypeScript", "Python", "Java", "C#", "PHP", "SQL"]
   },
   {
-    category: "Frameworks",
+    category: "Frameworks & Libraries",
     icon: "M3 5h18M3 5v14h18V5M8 12l2 2-2 2M14 16h2",
-    items: ["ReactJS", "Angular"]
+    items: ["ReactJS", "Angular", "Node.js", "Express"]
   },
   {
-    category: "Backend & Databases",
+    category: "Database & Backend",
     icon: "M4 6c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2zM4 6v12c0 1.1 3.6 2 8 2s8-.9 8-2V6M4 12c0 1.1 3.6 2 8 2s8-.9 8-2",
-    items: ["Python", "Java", "C#", "PHP", "MySQL"]
+    items: ["MongoDB", "MySQL", "Firebase", "JWT Authentication"]
   },
   {
-    category: "Developer Tools",
+    category: "Tools & Platforms",
     icon: "M14.7 6.3a1 1 0 010 1.4l-7 7a1 1 0 01-1.4 0l-2-2a1 1 0 011.4-1.4l1.3 1.3 6.3-6.3a1 1 0 011.4 0zM19 12a7 7 0 11-3.5-6.06",
-    items: ["Visual Studio 2022", "Visual Studio Code", "Android Studio", "Figma", "Canva"]
+    items: ["Git/GitHub", "Visual Studio 2022", "Visual Studio Code", "Android Studio", "Figma", "Canva"]
   },
   {
-    category: "Specializations",
+    category: "Core Competencies",
     icon: "M12 2l2.4 5 5.6.8-4 4 1 5.6L12 15l-5 2.4 1-5.6-4-4 5.6-.8z",
-    items: ["UI/UX Design", "System Development", "Responsive Web Design", "CRUD System Implementation", "Basic Database Design", "Role-Based Access Systems", "Debugging & Troubleshooting"]
+    items: ["UI/UX Design", "System Development", "Responsive Web Design", "CRUD System Implementation", "Basic Database Design", "Debugging & Troubleshooting", "Role-Based Access Control"]
+  },
+  {
+    category: "Web Technologies",
+    icon: "M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9S14.5 18.5 12 21c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z",
+    items: ["HTML", "CSS"]
   },
   {
     category: "Soft Skills",
     icon: "M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z",
-    items: ["Problem-Solving", "Team Collaboration", "Initiative", "Time Management", "Adaptability"]
+    items: ["Leadership", "Problem-Solving", "Team Collaboration", "Time Management", "Adaptability", "Initiative"]
   }
 ];
 
@@ -128,10 +133,10 @@ const projects = [
     year: "Capstone, 2026",
     tag: "Project Leader",
     role: "Project Leader and Developer · Team of 3",
-    situation: "Aircon servicing businesses often manage bookings, technician schedules, and payments manually, which leads to double-booked slots, scattered payment proofs, and no clear record of completed jobs or warranty claims.",
-    task: "Develop a centralized web platform for booking, technician assignment, payment verification, service reporting, and warranty tracking, serving customers, technicians, and administrators.",
-    action: "Built a full-stack application using React, Node.js, Express, and MongoDB; implemented role-based access, rule-based booking and scheduling, technician assignment with staffing rules, a payment verification workflow, refund and back job handling, service reports with signatures, automated status updates and reminders, and an audit log. Secured the system with signed file links, rate limiting, and token invalidation, and validated it with automated tests, a separate audit database, and browser checks at desktop and phone widths.",
-    result: "Delivered a centralized service management platform that passes 1,067 automated tests and a 137-check real-database audit, with concurrency issues such as double booking found and fixed before release.",
+    situation: "An aircon services company managed bookings, down payments, and service tracking manually, which led to double-booked slots, scattered payment proofs, and no clear record of jobs or warranty claims.",
+    task: "Lead the team, gather client requirements, and build the customer-side modules of a full-stack web application, from booking through payment, service reports, and warranty claims.",
+    action: "Led a team of 3, conducted requirements gathering with the client, and built the customer-side modules using React, Node.js, Express, MongoDB, and JWT authentication. Coordinated reviews and ran structured audits of each user role against the project paper, then fixed the findings in tested batches.",
+    result: "In progress. Core booking and payment modules are working and tested on desktop and mobile, with a double-booking race condition found and fixed. Deployment and user evaluation are underway.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT"]
   },
   {
@@ -179,7 +184,7 @@ const projects = [
     subtitle: "Accessible Healthcare Mobile Interface",
     year: "2024",
     tag: "Frontend Designer",
-    role: "Frontend Designer · Team of 3",
+    role: "Frontend Designer · Team of 4",
     situation: "Elderly users often struggle with complex mobile healthcare interfaces.",
     task: "Design an accessible and user-friendly healthcare mobile interface tailored for elderly users.",
     action: "Created high-fidelity prototypes in Figma, applying accessibility standards, simplified navigation, and usability principles.",
@@ -246,7 +251,8 @@ const experience = [
     org: "Information Technology Program Council",
     dates: "2025 – 2026",
     points: [
-      "Manage financial records and monitor organizational inflow and outflow transactions while maintaining structured financial documentation",
+      "Manage financial records and transaction documentation",
+      "Monitor inflow and outflow of organizational funds",
       "Ensure structured and accountable financial reporting"
     ]
   },
@@ -255,8 +261,9 @@ const experience = [
     org: "Maart.Chich",
     dates: "2021 – 2025",
     points: [
-      "Founded and independently managed a handmade product brand overseeing product design, social media marketing, customer transactions, logistics coordination, and university bazaar participation",
-      "Managed end-to-end operations independently"
+      "Founded and independently managed a handmade product brand",
+      "Oversaw product design, marketing, customer transactions, and logistics",
+      "Participated in university bazaars and managed end-to-end operations independently"
     ]
   }
 ];
